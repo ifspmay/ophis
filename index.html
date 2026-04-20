@@ -16,12 +16,28 @@
         <div class="identRapida">
           <h2>Identificação rápida</h2>
           <p>Tire uma foto ou envie uma imagem para identificar o animal</p>
+          <div
+            id="imagemContainerInicio"
+            class="imagem-container"
+            style="display: none"
+          >
+            <img id="imagemSelecionadaInicio" src="" alt="Imagem selecionada" />
+            <button
+              class="botao-identificar"
+              onclick="identificarAnimal('inicio')"
+            >
+              Identificar animal
+            </button>
+            <button class="botao-remover" onclick="removerImagemInicio()">
+              Remover imagem
+            </button>
+          </div>
           <div class="botoes">
-            <button class="botao">
+            <button class="botao" onclick="selecionarImagemInicio('camera')">
               <img src="./images/camera icone.png" alt="icone de camera" />
               <p>Tirar foto</p>
             </button>
-            <button class="botao">
+            <button class="botao" onclick="selecionarImagemInicio('galeria')">
               <img
                 src="./images/adicionar foto icone.png"
                 alt="icone de adicionar foto"
@@ -30,6 +46,19 @@
             </button>
           </div>
         </div>
+        <input
+          type="file"
+          id="cameraInputInicio"
+          accept="image/*"
+          capture="environment"
+          style="display: none"
+        />
+        <input
+          type="file"
+          id="galeriaInputInicio"
+          accept="image/*"
+          style="display: none"
+        />
         <div class="casoEmergencia">
           <img src="./images/alerta icone.png" alt="icone de alerta" />
           <div>
@@ -75,8 +104,18 @@
             <h2>Nenhuma imagem selecionada</h2>
             <p>Tire uma foto ou escolha uma imagem da galeria</p>
           </div>
-          <div id="imagemContainer" class="imagem-container" style="display: none">
+          <div
+            id="imagemContainer"
+            class="imagem-container"
+            style="display: none"
+          >
             <img id="imagemSelecionada" src="" alt="Imagem selecionada" />
+            <button
+              class="botao-identificar"
+              onclick="identificarAnimal('identificar')"
+            >
+              Identificar animal
+            </button>
             <button class="botao-remover" onclick="removerImagem()">
               Remover imagem
             </button>
@@ -94,8 +133,31 @@
               <p>Galeria</p>
             </button>
           </div>
-          <input type="file" id="cameraInput" accept="image/*" capture="environment" style="display: none"/>
-          <input type="file" id="galeriaInput" accept="image/*" style="display: none"/>
+          <input
+            type="file"
+            id="cameraInput"
+            accept="image/*"
+            capture="environment"
+            style="display: none"
+          />
+          <input
+            type="file"
+            id="galeriaInput"
+            accept="image/*"
+            style="display: none"
+          />
+        </div>
+        <div class="dicasFoto">
+          <img src="./images/icone info.png" alt="" />
+          <div>
+            <ul>
+              <h3>Dica para melhores resultados</h3>
+              <li>Tire a foto de uma distancia segura</li>
+              <li>Garanta uma boa iluminação</li>
+              <li>Enquadre todo o animal se possível</li>
+              <li>Evite fotos tremidas</li>
+            </ul>
+          </div>
         </div>
       </section>
       <section id="guia" class="page">
@@ -132,5 +194,32 @@
         </button>
       </div>
     </footer>
+    <!-- Modal de identificação -->
+    <div id="modalIdentificacao" class="modal" style="display: none">
+      <div class="modal-content">
+        <span class="close" onclick="fecharModal()">&times;</span>
+        <img
+          id="animalImagem"
+          src="./images/cobra coral.webp"
+          alt="Cobra Coral"
+        />
+        <h1 id="animalNome">Cobra Coral</h1>
+        <p id="animalNomeCientifico"><em>Micrurus corallinus</em></p>
+        <h2 id="animalVenenoso">Venenosa</h2>
+        <p id="animalDescricao">
+          A cobra coral é uma serpente pequena e altamente venenosa, conhecida
+          por seus anéis coloridos em vermelho, amarelo e preto. É encontrada em
+          regiões tropicais e seu veneno pode ser letal se não tratado
+          rapidamente.
+        </p>
+        <h3>O que fazer em caso de picada:</h3>
+        <ul>
+          <li>Procure atendimento médico imediatamente.</li>
+          <li>Não tente sugar o veneno ou cortar a ferida.</li>
+          <li>Mantenha a área afetada imóvel e abaixo do nível do coração.</li>
+          <li>Leve a serpente para identificação se possível (sem risco).</li>
+        </ul>
+      </div>
+    </div>
   </body>
 </html>
