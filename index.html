@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -38,7 +38,9 @@
               Procure atendimento médico imediatamente! Use o botão abaixo para
               orientações de emergência.
             </p>
-            <button onclick="mostrarPagina('socorros')">Primeiros socorros</button>
+            <button onclick="mostrarPagina('socorros')">
+              Primeiros socorros
+            </button>
           </div>
         </div>
         <div class="outraPag">
@@ -48,7 +50,10 @@
             <p>Conheça os animais venenosos</p>
           </button>
           <button class="botoes2" onclick="mostrarPagina('hospitais')">
-            <img src="./images/icone mapa.png" alt="icone de marcador de mapa" />
+            <img
+              src="./images/icone mapa.png"
+              alt="icone de marcador de mapa"
+            />
             <h3>Hospitais próximos</h3>
             <p>Encontre atendimento proximo</p>
           </button>
@@ -64,7 +69,34 @@
         </div>
       </section>
       <section id="identificar" class="page">
-        <h1>teste</h1>
+        <div class="identRapida">
+          <div id="aviso" class="aviso-container">
+            <img src="./images/icone camera cinza.png" alt="icone de camera" />
+            <h2>Nenhuma imagem selecionada</h2>
+            <p>Tire uma foto ou escolha uma imagem da galeria</p>
+          </div>
+          <div id="imagemContainer" class="imagem-container" style="display: none">
+            <img id="imagemSelecionada" src="" alt="Imagem selecionada" />
+            <button class="botao-remover" onclick="removerImagem()">
+              Remover imagem
+            </button>
+          </div>
+          <div class="botoes">
+            <button class="botao" onclick="selecionarImagem('camera')">
+              <img src="./images/camera icone.png" alt="icone de camera" />
+              <p>Tirar foto</p>
+            </button>
+            <button class="botao" onclick="selecionarImagem('galeria')">
+              <img
+                src="./images/adicionar foto icone.png"
+                alt="icone de adicionar foto"
+              />
+              <p>Galeria</p>
+            </button>
+          </div>
+          <input type="file" id="cameraInput" accept="image/*" capture="environment" style="display: none"/>
+          <input type="file" id="galeriaInput" accept="image/*" style="display: none"/>
+        </div>
       </section>
       <section id="guia" class="page">
         <h1>teste1</h1>
@@ -79,23 +111,23 @@
     <footer class="barraNav">
       <div class="container">
         <button class="navegacao" onclick="mostrarPagina('inicio')">
-          <img src="./images/icone de casa.png" alt="icone de casa">
+          <img src="./images/icone de casa.png" alt="icone de casa" />
           <h4>Inicio</h4>
         </button>
         <button class="navegacao" onclick="mostrarPagina('identificar')">
-          <img src="./images/camera icone.png" alt="icone de camera">
+          <img src="./images/camera icone.png" alt="icone de camera" />
           <h4>Identificar</h4>
         </button>
         <button class="navegacao" onclick="mostrarPagina('guia')">
-          <img src="./images/icone guia branco.png" alt="icone de livro">
+          <img src="./images/icone guia branco.png" alt="icone de livro" />
           <h4>Guia</h4>
         </button>
         <button class="navegacao" onclick="mostrarPagina('socorros')">
-          <img src="./images/icone coracao.png" alt="icone de coração">
+          <img src="./images/icone coracao.png" alt="icone de coração" />
           <h4>Socorros</h4>
         </button>
         <button class="navegacao" onclick="mostrarPagina('hospitais')">
-          <img src="./images/icone mapa branco.png" alt="icone de mapa">
+          <img src="./images/icone mapa branco.png" alt="icone de mapa" />
           <h4>Hospitais</h4>
         </button>
       </div>
