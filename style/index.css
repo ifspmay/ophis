@@ -150,6 +150,221 @@ footer img {
   margin-top: 20px;
 }
 
+/* Estilos para o guia de animais */
+#animais-lista {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 50px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 500px;
+}
+
+.search-bar input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.search-bar img {
+  width: 20px;
+  height: 20px;
+}
+
+.animal-item {
+  position: relative;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.082);
+  padding: 20px;
+  width: 400px;
+  min-height: 200px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.animal-item:hover {
+  transform: scale(1.05);
+}
+
+.animal-item img {
+  max-width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+  flex-shrink: 0;
+}
+
+.animal-item .text-content {
+  flex: 1;
+  text-align: left;
+}
+
+.perigo-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.animal-header {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 40px 20px;
+  text-align: left;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.animal-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.header-back-button {
+  position: absolute;
+  top: 20px;
+  left: 35px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 5px;
+}
+
+.header-back-button:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.header-text {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  padding-left: 30px;
+}
+
+.detalhes-conteudo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.perigo-div {
+  padding: 25px;
+  border-radius: 10px;
+  text-align: left;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.perigo-label {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.perigo-value {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.perigo-alto {
+  background-color: #ff6f00;
+}
+
+.perigo-critico {
+  background-color: #d32f2f;
+}
+
+.info-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.info-card h3 {
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.info-card p {
+  margin: 0;
+  line-height: 1.6;
+  color: #444;
+}
+
+.info-card.sintomas {
+  /* background-color: rgba(255, 235, 59, 0.25); */
+}
+
+.info-card.socorros {
+  /* background-color: rgba(244, 67, 54, 0.18); */
+}
+
+.detalhes-botoes {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.detalhes-botoes button {
+  flex: 1;
+  min-width: 140px;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  background-color: #44b300;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.detalhes-botoes button:hover {
+  background-color: #369900;
+}
+
 .prevencao ul {
   list-style: none;
   padding: 10px;
@@ -303,6 +518,127 @@ footer img {
   color: #44b300;
 }
 
+.alerta {
+  color: #666;
+  padding-top: 10px;
+}
+
+.emergencia {
+  color: white;
+  background-color: #44b300;
+  border-radius: 10px;
+  margin: 15px;
+  padding: 10px;
+  text-align: center;
+}
+
+.emergencia .contatoEmerg {
+  display: flex;
+  flex-direction:row-reverse;
+  justify-content: space-between;
+  background-color: white;
+  margin: 15px;
+  padding: 10px;
+  border-radius: 10px;
+  color: #222;
+  border: none;
+  width: 90%;
+}
+
+.emergencia h4{
+  color: #44b300;
+}
+
+.emergencia img {
+  max-width: 40px;
+}
+
+.contatoEmerg div{
+  width: 80%;
+  text-align: start;
+}
+
+.casosEspec{
+  margin: 20px;
+  padding: 20px;
+  box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.082);
+  width: 30%;
+  border-radius: 20px;
+}
+
+.casosEspec h3{
+  color: #44b300;
+}
+
+.picada h4{
+  padding: 10px;
+}
+
+.picada ul{
+  padding: 20px;
+}
+
+.ligueEmergencia{
+  margin: 20px;
+  padding: 10px;
+  background-color: #45b30046;
+  border: 2px solid #369900;
+  border-radius: 10px;
+}
+
+.ligueEmergencia button{
+  background-color: #44b300;
+  padding: 10px;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.ligueEmergencia strong{
+  color: #34770b;
+}
+
+.ligueEmergencia h3{
+  color: #34770b;
+}
+
+#hospitais iframe {
+  display: block;
+  width: 90%;
+  max-width: 320px;
+  height: 200px;
+  margin: 20px auto;
+}
+
+.hospitais{
+  margin: 20px;
+  padding: 20px;
+  box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.082);
+  border-radius: 20px;
+}
+
+.hospitais a{
+  text-decoration: none;
+  color: #222;
+}
+
+.hospitais button a{
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+}
+
+.hospitais button{
+  margin-top: 10px;
+  padding: 10px;
+  width: 40%;
+  border: none;
+  border-radius: 10px;
+  background-color: #44b300;
+  color: white;
+}
+
 @media (max-width: 600px) {
   .identRapida {
     width: 80%;
@@ -327,5 +663,40 @@ footer img {
 
   .prevencao {
     width: 90%;
+  }
+
+  .animal-item {
+    width: 90%;
+    flex-direction: column;
+    min-height: auto;
+    padding: 15px;
+  }
+  .animal-item img {
+    max-width: 100%;
+    height: auto;
+  }
+  .animal-item .text-content {
+    text-align: center;
+  }
+
+  .animal-header {
+    height: 150px;
+    padding: 30px 20px;
+  }
+
+  .header-back-button {
+    left: 20px;
+  }
+
+  .header-text {
+    padding-left: 20px;
+  }
+
+  .search-bar {
+    width: 95%;
+  }
+
+  .casosEspec{
+    width: 80%;
   }
 }

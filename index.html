@@ -34,12 +34,15 @@
           </div>
           <div class="botoes">
             <button class="botao" onclick="selecionarImagemInicio('camera')">
-              <img src="./images/camera icone.png" alt="icone de camera" />
+              <img
+                src="./images/icones/camera icone.png"
+                alt="icone de camera"
+              />
               <p>Tirar foto</p>
             </button>
             <button class="botao" onclick="selecionarImagemInicio('galeria')">
               <img
-                src="./images/adicionar foto icone.png"
+                src="./images/icones/adicionar foto icone.png"
                 alt="icone de adicionar foto"
               />
               <p>Galeria</p>
@@ -60,7 +63,7 @@
           style="display: none"
         />
         <div class="casoEmergencia">
-          <img src="./images/alerta icone.png" alt="icone de alerta" />
+          <img src="./images/icones/alerta icone.png" alt="icone de alerta" />
           <div>
             <h2>Em caso de picada</h2>
             <p>
@@ -74,13 +77,13 @@
         </div>
         <div class="outraPag">
           <button class="botoes2" onclick="mostrarPagina('guia')">
-            <img src="./images/icone do guia.png" alt="icone de livro" />
+            <img src="./images/icones/icone do guia.png" alt="icone de livro" />
             <h3>Guia de espécies</h3>
             <p>Conheça os animais venenosos</p>
           </button>
           <button class="botoes2" onclick="mostrarPagina('hospitais')">
             <img
-              src="./images/icone mapa.png"
+              src="./images/icones/icone mapa.png"
               alt="icone de marcador de mapa"
             />
             <h3>Hospitais próximos</h3>
@@ -100,7 +103,10 @@
       <section id="identificar" class="page">
         <div class="identRapida">
           <div id="aviso" class="aviso-container">
-            <img src="./images/icone camera cinza.png" alt="icone de camera" />
+            <img
+              src="./images/icones/icone camera cinza.png"
+              alt="icone de camera"
+            />
             <h2>Nenhuma imagem selecionada</h2>
             <p>Tire uma foto ou escolha uma imagem da galeria</p>
           </div>
@@ -122,12 +128,15 @@
           </div>
           <div class="botoes">
             <button class="botao" onclick="selecionarImagem('camera')">
-              <img src="./images/camera icone.png" alt="icone de camera" />
+              <img
+                src="./images/icones/camera icone.png"
+                alt="icone de camera"
+              />
               <p>Tirar foto</p>
             </button>
             <button class="botao" onclick="selecionarImagem('galeria')">
               <img
-                src="./images/adicionar foto icone.png"
+                src="./images/icones/adicionar foto icone.png"
                 alt="icone de adicionar foto"
               />
               <p>Galeria</p>
@@ -148,7 +157,7 @@
           />
         </div>
         <div class="dicasFoto">
-          <img src="./images/icone info.png" alt="" />
+          <img src="./images/icones/icone info.png" alt="" />
           <div>
             <ul>
               <h3>Dica para melhores resultados</h3>
@@ -161,46 +170,195 @@
         </div>
       </section>
       <section id="guia" class="page">
-        <h1>teste1</h1>
+        <h2>Guia de Animais</h2>
+        <div class="search-bar">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Buscar por nome ou nome científico"
+          />
+          <img src="./images/icones/icone procurar.png" alt="Buscar" />
+        </div>
+        <div id="animais-lista"></div>
+      </section>
+      <section id="detalhes" class="page">
+        <div id="detalhes-header" class="animal-header">
+          <button class="header-back-button" onclick="mostrarPagina('guia')">
+            ←
+          </button>
+          <div class="header-text">
+            <h1 id="detalhes-nome"></h1>
+            <p id="detalhes-cientifico"></p>
+          </div>
+        </div>
+        <main class="detalhes-conteudo">
+          <div id="detalhes-perigo" class="perigo-div"></div>
+          <div class="info-card">
+            <h3>Sobre</h3>
+            <p id="detalhes-sobre"></p>
+          </div>
+          <div class="info-card">
+            <h3>Características Físicas</h3>
+            <p id="detalhes-caracteristicas"></p>
+          </div>
+          <div class="info-card">
+            <h3>Habitat</h3>
+            <p id="detalhes-habitat"></p>
+          </div>
+          <div class="info-card sintomas">
+            <h3>Sintomas</h3>
+            <p id="detalhes-sintomas"></p>
+          </div>
+          <div class="info-card socorros">
+            <h3>Primeiros Socorros</h3>
+            <p id="detalhes-socorros"></p>
+          </div>
+          <div class="detalhes-botoes">
+            <button onclick="mostrarPagina('socorros')">Socorros</button>
+            <button onclick="mostrarPagina('hospitais')">Hospitais</button>
+          </div>
+        </main>
       </section>
       <section id="socorros" class="page">
-        <h1>teste2</h1>
+        <div class="emergencia">
+          <div>
+            <h3>EMERGÊNCIA</h3>
+            <P>Em caso de picada, procure atendimento médico imediatamente!</P>
+    
+            <button class="contatoEmerg">
+              <img src="./images/icones/icone telefone.png" alt="">
+              <h4>192</h4>
+              <div>
+                <h4>SAMU</h4>
+                <p>Atendimento médico de urgência</p>
+              </div>
+            </button>
+            <button class="contatoEmerg">
+              <img src="./images/icones/icone telefone.png" alt="">
+              <h4>193</h4>
+              <div>
+                <h4>BOMBEIROS</h4>
+                <p>Emergências e resgates</p>
+              </div>
+            </button>
+            <button class="contatoEmerg">
+              <img src="./images/icones/icone telefone.png" alt="">
+              <h4>0800-722-6001</h4>
+              <div>
+                <h4>DISQUE INTOXICAÇÃO</h4>
+                <p>Orientações sobre intoxicações</p>
+              </div>
+            </button>
+          </div>
+        </div>
+        <div class="casosEspec">
+          <h3>Casos Especificos</h3>
+          <div class="picada">
+            <h4>Picada de cobra</h4>
+            <ul>O que fazer:
+              <li>Deite a vítima e mantenha-a em repouso</li>
+              <li>Remova anéis, pulseiras e calçados apertados</li>
+              <li>Lave o local com água e sabão</li>
+              <li>Busque atendimento médico URGENTE</li>
+              <li>Tente identificar a serpente (cor, tamanho, padrões)</li>
+            </ul>
+            <ul>O que não fazer:
+              <li>Não faça torniquete ou garrote: Isso restringe a circulação e aumenta o risco de necrose.</li>
+              <li>Não corte ou perfure o local</li>
+              <li>Não tente chupar o veneno</li>
+              <li>Não aplique substâncias casseiras</li>
+            </ul>
+          </div>
+          <div class="picada">
+            <h4>Picada de aranha</h4>
+            <ul>O que fazer:
+              <li>Lave o local com água e sabão</li>
+              <li>Aplique compressa fria para aliviar a dor</li>
+              <li>Mantenha o local elevado, se possível</li>
+              <li>Procure atendimento médico</li>
+              <li>Se possível, identifique a aranha</li>
+            </ul>
+            <ul>O que não fazer:
+              <li>Não espremer ou apertar o local</li>
+              <li>Não aplicar substâncias caseiras</li>
+              <li>Não ignorar sintomas como dor intensa ou febre</li>
+            </ul>
+          </div>
+          <div class="picada">
+            <h4>Picada de escorpião</h4>
+            <ul>O que fazer:
+              <li>Lave o local com água e sabão</li>
+              <li>Aplique compressa morna para aliviar a dor</li>
+              <li>Mantenha a pessoa calma e em repouso</li>
+              <li>Procure atendimento médico imediato</li>
+            </ul>
+            <ul>O que não fazer:
+              <li>Não fazer torniquete</li>
+              <li>Não cortar ou perfurar o local</li>
+              <li>Não aplicar substâncias caseiras</li>
+              <li>Não ignorar sintomas como dor intensa, vômito ou falta de ar</li>
+            </ul>
+          </div>
+        </div>
       </section>
       <section id="hospitais" class="page">
-        <h1>teste3</h1>
+        <div class="ligueEmergencia">
+          <h3>Em caso de emergência</h3>
+          <p>Ligue <strong>192 SAMU</strong> ou <strong>193 (Bombeiros)</strong> para atendimento imediato e orientações sobre qual hospital procurar.</p>
+          <button onclick="mostrarPagina('socorros')">
+            Primeiros socorros
+          </button>
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d12037.931555133013!2d-46.71965275!3d-23.565098449999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1shospitais!5e1!3m2!1spt-BR!2sbr!4v1776719612192!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="hospitais">
+          <h3>Hospital Vital Brazil</h3>
+          <a href="https://maps.app.goo.gl/if3j2X8fQBszeg1q9">Av. Vital Brasil, 1500 - Butantã, São Paulo </a>
+          <p>(11) 3723-6963</p>
+          <button>
+            <a href="https://maps.app.goo.gl/cdTZA1weQj3Yof476"> Rota</a>
+          </button>
+          <button>
+            <a href="tel:+551137236963">Ligue</a>
+          </button>
+        </div>
       </section>
     </main>
     <footer class="barraNav">
       <div class="container">
         <button class="navegacao" onclick="mostrarPagina('inicio')">
-          <img src="./images/icone de casa.png" alt="icone de casa" />
+          <img src="./images/icones/icone de casa.png" alt="icone de casa" />
           <h4>Inicio</h4>
         </button>
         <button class="navegacao" onclick="mostrarPagina('identificar')">
-          <img src="./images/camera icone.png" alt="icone de camera" />
+          <img src="./images/icones/camera icone.png" alt="icone de camera" />
           <h4>Identificar</h4>
         </button>
         <button class="navegacao" onclick="mostrarPagina('guia')">
-          <img src="./images/icone guia branco.png" alt="icone de livro" />
+          <img
+            src="./images/icones/icone guia branco.png"
+            alt="icone de livro"
+          />
           <h4>Guia</h4>
         </button>
         <button class="navegacao" onclick="mostrarPagina('socorros')">
-          <img src="./images/icone coracao.png" alt="icone de coração" />
+          <img src="./images/icones/icone coracao.png" alt="icone de coração" />
           <h4>Socorros</h4>
         </button>
         <button class="navegacao" onclick="mostrarPagina('hospitais')">
-          <img src="./images/icone mapa branco.png" alt="icone de mapa" />
+          <img
+            src="./images/icones/icone mapa branco.png"
+            alt="icone de mapa"
+          />
           <h4>Hospitais</h4>
         </button>
       </div>
     </footer>
-    <!-- Modal de identificação -->
     <div id="modalIdentificacao" class="modal" style="display: none">
       <div class="modal-content">
         <span class="close" onclick="fecharModal()">&times;</span>
         <img
           id="animalImagem"
-          src="./images/cobra coral.webp"
+          src="./images/animais/cobra coral.webp"
           alt="Cobra Coral"
         />
         <h1 id="animalNome">Cobra Coral</h1>
@@ -219,6 +377,10 @@
           <li>Mantenha a área afetada imóvel e abaixo do nível do coração.</li>
           <li>Leve a serpente para identificação se possível (sem risco).</li>
         </ul>
+        <p class="alerta">
+          *Esta é uma simulação de resultado para fins de teste. A análise real
+          sera feita por IA.
+        </p>
       </div>
     </div>
   </body>
